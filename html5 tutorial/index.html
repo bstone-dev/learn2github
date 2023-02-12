@@ -1,9 +1,114 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <title>HTML Cheat Sheet</title>
-    </head>
-    <body>
+<html>
+  <head>
+    <title>HTML Cheat Sheet</title>
+  </head>
+  <body>
+    <!-- Headings -->
+    <h1>Heading One</h1>
+    <h2>Heading Two</h2>
+    <h3>Heading Three</h3>
+    <h4>Heading Four</h4>
+    <h5>Heading Five</h5>
+    <h6>Heading Six</h6>
+    <!-- Paragraph -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <a href="https://github.com/bstone-dev" target="_blank"> Veniam facere</a>
+      obcaecati <strong> distinctio autem molestiae </strong> fugiat itaque
+      molestias error quos, dolore voluptatibus magnam culpa veritatis quibusdam
+      quam iste aliquid saepe explicabo!
+    </p>
+    <!-- Lists -->
+    <ul> <!-- Unordered List-->
+        <li> List Item 1</li>
+        <li> List Item 2</li>
+        <li> List Item 3</li>
+        <li> List Item 4</li>
+        <li> List Item 5</li>
+    </ul>
+    <ol> <!-- Ordered List -->
+        <li> List Item 1</li>
+        <li> List Item 2</li>
+        <li> List Item 3</li>
+        <li> List Item 4</li>
+        <li> List Item 5</li>
+    </ol>
+    <!-- Table -->
+    <table>
+        <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Brandon S.</td>
+                <td>notmyrealemail@nothanks.com</td>
+                <td>9001</td>
+            </tr>
+            <tr>
+                <td>Fake Person</td>
+                <td>FakeEmail@nothanks.com</td>
+                <td>19</td>
+            <tr>
+                <td>Elsa Ice</td>
+                <td>Elsa@snowland.com</td>
+                <td>29</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <!-- Forms -->
+    <form action="process.php" method="POST"> <!-- POST / GET would be more advanced than basic html as a way to input data on a site -->
+        <div>
+            <label>First Name</label>
+            <input type="text" name="FirstName" placeholder="Enter first name">
+        </div>
+        <br>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="LastName" placeholder="Enter last name">
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter email address">
+        </div>
+        <br>
+        <div>
+            <label>Message</label>
+            <textarea name="message" placeholder="(optional) leave a message"></textarea>
+        </div>
+        <br>
+        <div>
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="other">other</option>
+                </select>
+        </div>
+        <br>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age" value="30">
+            </div>
+            <div>
+                <label>Birthday:</label>
+                <input type="date" name="birthday">
+            </div>
+            <input type="submit" name="submit" value="Submit">
+    </form>
+    <!-- Button -->
+    <button click="someFunction">Click Me</button>
+    <!-- Images -->
+    <img src="images\sample.jpg" alt="My Sample Image" width="200">
 
-    </body>
+
+
+    <div style="margin-top:500px"></div>
+  </body>
 </html>
