@@ -33,15 +33,38 @@ $ matches the end of a statement. /\.$/g would match the period at the end of a 
 /(?<=[tT]he)./g ?<= is a positive look behind. It matches after a pattern. 
 So whatever is defined after the = within the () will count
 
+/(?=at)./g ?= is a positive look ahead, anything before at counts.
+/.(?!at)/g ?! is everything NOT ahead of at.
+
+\d is digits
+
+/\d{3}[ -]?\d{3}[ -]?\d{4}/gm - multiline search that could be used to get phone numbers with no, spaces or - delimiters
+
+/(\d{3})[ -]?(\d{3})[ -]?(\d{4})/gm - parenthesis would capture what is in () and ignore the rest.
+
+Doing a replace with $1$2$3 would take each group and put them one after another.
+
+Group Naming:
+/(?<areacode>\d{3})[ -]?(\d{3})[ -]?(\d{4})/gm
+
+$areacode would pull the first group now called areacode in find and replace
+
+/(?:(\+1)[] -])?(?<areacode>\d{3})[ -]?(\d{3})[ -]?(\d{4})/gm - the ?: would not capture
+
+
+
 For my purposes I want everything after G
 /(?<=G)./g would get the blank space after G, for instance.
 
-/(?<=G).+-?.?[0-9]{1,4}.lb/
+/(?<=G)(.+-?.?\d{1,4}).?:(lb)/
+$weight
 
-
+without the lbs:
+/(?<=G\s+)(?<weight>-?\s?\d{1,4})(?=\slb)/
 """
 
-# What i'll need to pull forklift data at work: /(?<=G\s+)-?\s?[0-9]{1,4}.lb/
+# What i'll need to pull forklift data at work: /(?<=G\s+)-?\s?[\d]{1,4}.lb/
+#is just the first match. I need to find a way for it to pull the last match.
 
 
 print('\n'+'Hello World'+'\n')
